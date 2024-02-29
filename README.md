@@ -1,7 +1,9 @@
 # AI_IMG
-## 搭建自己的AI图床
+## 搭建自己的 AI 图床
 - https://github.com/Sygil-Dev/sygil-webui
-
+## AI 大模型
+- https://huggingface.co/BotsOne/utilitypole
+- https://huggingface.co/models?pipeline_tag=text-to-image&sort=trending
 
 ## commit
 - `feat`：新功能（feature）
