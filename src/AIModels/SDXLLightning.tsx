@@ -4,6 +4,8 @@ import {SDXLLightningCredentials} from "./env.ts";
 import {ImgComponent} from "../component/ImgComponent/ImgComponent.tsx";
 import {useState} from "react";
 import {AnyObject} from "../type/common.ts";
+import css from './SDXLLightning.module.less'
+
 fal.config({
   credentials: SDXLLightningCredentials, // or a function that returns a string
 });
@@ -35,7 +37,10 @@ export function SDXLLightning() {
     setInputs(e.target.value)
   }
 
-  const onClickDemo = async () => {}
+  const onClickDemo =  (e:React.MouseEvent) => {
+    const target = e.target as HTMLDivElement;
+    setInputs(target.innerText)
+  }
 
   return (
     <div>
@@ -44,7 +49,7 @@ export function SDXLLightning() {
       </div>
       <div onClick={onClickDemo}>
         {demoPrompt.map((item,index) => {
-            return (<div key={index}>{item}</div>)
+            return (<div className={css.demoItem} key={index}>{item}</div>)
           })}
       </div>
 
