@@ -4,7 +4,7 @@
 ## AI 大模型
 - https://huggingface.co/BotsOne/utilitypole
 - https://huggingface.co/models?pipeline_tag=text-to-image&sort=trending
-
+- https://huggingface.co/ByteDance/SDXL-Lightning
 ## commit
 - `feat`：新功能（feature）
 - `fix`：修补bug
@@ -13,3 +13,5 @@
 - `refactor`：重构（即不是新增功能，也不是修改bug的代码变动）
 - `test`：增加测试
 - `chore`：构建过程或辅助工具的变动
+
+[记录开发项目中的基础问题](./process.md)
