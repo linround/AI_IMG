@@ -11,7 +11,7 @@ fal.config({
 });
 
 const demoPrompt = [
-  'The mouse and the lion are talking',
+  'this is a photo,Next to a big river in the real world,The mouse and the lion are talking',
   'moon'
 ]
 
