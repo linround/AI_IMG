@@ -1,19 +1,24 @@
-# 密码管理
+# 管理一些数据
 
 huggingface: Linyuan333.  
 model:linyuan333
 
+## 开源示例
+| 地址  | 特性               |
+|-----|------------------|
+| https://github.com/evanw/webgl-filter?tab=readme-ov-file | 一款对图片进行处理的demo   |
+| https://gitlab.com/bradenbest/canvas-paint | 使用canvas 画一个杯子。  |
+| https://github.com/comfyanonymous/ComfyUI | 一个AI大模型，用于处理图片效果 |
 
-# 源码资源
-- https://github.com/evanw/webgl-filter?tab=readme-ov-file
-- https://gitlab.com/bradenbest/canvas-paint
-  - 这是一个 canvas demo
-- https://github.com/comfyanonymous/ComfyUI
 
 # 产品形式
-- https://openart.ai/home
-- https://photomosh.com/
-- https://www.leiapix.com/
+
+| 地址  | 特性                |
+|-----|-------------------|
+|https://openart.ai/home| 可参考的海外AI 成图应用     |
+|https://photomosh.com/| 一款利用shader实现的各种图片效果 |
+|https://www.leiapix.com/| 可参考的海外成图应用        |
+
 
 # 关于大模型部署
 
