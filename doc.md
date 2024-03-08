@@ -14,3 +14,8 @@ model:linyuan333
 - https://openart.ai/home
 - https://photomosh.com/
 - https://www.leiapix.com/
+
+# 关于大模型部署
+
+- [vllm](https://github.com/vllm-project/vllm) 部署大模型是主流
+- cpu 部署可以使用 [ollama](https://github.com/ollama/ollama)
