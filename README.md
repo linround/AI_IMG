@@ -1,4 +1,6 @@
 # AI_IMG
+一款基于AI成图的图片处理工具。通过调节图片参数，即可生成相应的图片效果。
+
 ## 搭建自己的 AI 图床
 - https://github.com/Sygil-Dev/sygil-webui
 ## AI 大模型
