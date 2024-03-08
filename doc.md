@@ -20,6 +20,14 @@ model:linyuan333
 |https://www.leiapix.com/| 可参考的海外成图应用        |
 
 
+# web 开发模板
+
+| 地址  | 特性                                           |
+|-----|----------------------------------------------|
+|https://github.com/weijunext/smart-excel-ai| Next.js。集成了登录、支付（lemon squeezy）、AI功能（免费）     |
+|https://github.com/wasp-lang/open-saas/| React + Node.js。集成了登录、支付（stripe）、邮件、AI功能（免费） |
+
+
 # 关于大模型部署
 
 - [vllm](https://github.com/vllm-project/vllm) 部署大模型是主流
