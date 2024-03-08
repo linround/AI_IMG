@@ -4,11 +4,13 @@ huggingface: Linyuan333.
 model:linyuan333
 
 
-# 前车之鉴
-- https://www.leiapix.com/
-- https://photomosh.com/
+# 源码资源
 - https://github.com/evanw/webgl-filter?tab=readme-ov-file
 - https://gitlab.com/bradenbest/canvas-paint
+  - 这是一个 canvas demo
 - https://github.com/comfyanonymous/ComfyUI
 
+# 产品形式
 - https://openart.ai/home
+- https://photomosh.com/
+- https://www.leiapix.com/
