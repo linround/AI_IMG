@@ -4,23 +4,22 @@ import {SDXLLightningCredentials} from "./env.ts";
 import {ImgComponent} from "../component/ImgComponent/ImgComponent.tsx";
 import {useState} from "react";
 import {AnyObject} from "../type/common.ts";
-import css from './SDXLLightning.module.less'
 
 fal.config({
   credentials: SDXLLightningCredentials, // or a function that returns a string
 });
 
-const demoPrompt = [
-  'this is a photo,Next to a big river in the real world,The mouse and the lion are talking',
-  'moon'
-]
+
 
 
 // url: https://huggingface.co/ByteDance/SDXL-Lightning
-export function SDXLLightning() {
-
+interface SDXLLightningProps  {
+  inputs: string
+  setInputs: React.Dispatch<React.SetStateAction<string>>
+}
+export function SDXLLightning(props:SDXLLightningProps) {
+  const {inputs,setInputs } = props
   const [imgUrl,setImgUrl ] = useState<string>('')
-  const [inputs, setInputs] = useState<string>('')
   const  onClick = async () => {
     const result = await fal.subscribe("110602490-fast-sdxl", {
       input: {
@@ -37,20 +36,11 @@ export function SDXLLightning() {
     setInputs(e.target.value)
   }
 
-  const onClickDemo =  (e:React.MouseEvent) => {
-    const target = e.target as HTMLDivElement;
-    setInputs(target.innerText)
-  }
 
   return (
     <div>
       <div>
         <ImgComponent src={imgUrl} />
-      </div>
-      <div onClick={onClickDemo}>
-        {demoPrompt.map((item,index) => {
-            return (<div className={css.demoItem} key={index}>{item}</div>)
-          })}
       </div>
 
       <div>

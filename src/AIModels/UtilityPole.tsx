@@ -3,9 +3,14 @@ import React from "react";
 import { useState } from 'react'
 import {AnyObject} from "../type/common.ts";
 import {ImgComponent} from "../component/ImgComponent/ImgComponent.tsx";
-export function UtilityPole() {
+
+interface UtilityPoleProps {
+  inputs: string
+  setInputs: React.Dispatch<React.SetStateAction<string>>
+}
+export function UtilityPole(props:UtilityPoleProps) {
+  const {inputs,setInputs } = props
   const [imgUrl,setImgUrl ] = useState<string>('')
-  const [inputs, setInputs] = useState<string>('')
   async function query(data:AnyObject) {
     const response = await fetch(
       "https://api-inference.huggingface.co/models/BotsOne/utilitypole",
