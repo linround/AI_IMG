@@ -7,6 +7,15 @@
 - https://huggingface.co/BotsOne/utilitypole
 - https://huggingface.co/models?pipeline_tag=text-to-image&sort=trending
 - https://huggingface.co/ByteDance/SDXL-Lightning
+
+## 图像生成
+
+| 链接                                 | 描述                                                         | 费用                   |
+|------------------------------------|------------------------------------------------------------|----------------------|
+| https://www.midjourney.com/imagine | 在使用   midjourney 机器 生成超过 1000 张图片后 可以使用. | 700 人名币/每年 |
+| https://discord.com/channels/@me/1217321328139305020| 在 discord 调用 midjourney 机器人来生成图片                           |                      |
+
+
 ## commit
 - `feat`：新功能（feature）
 - `fix`：修补bug
