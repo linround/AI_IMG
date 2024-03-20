@@ -1,14 +1,16 @@
-import React from "react";
+import React, {useContext} from "react";
 // url: https://huggingface.co/BotsOne/utilitypole
 import { useState } from 'react'
 import {AnyObject} from "../type/common.ts";
 import {ImgComponent} from "../component/ImgComponent/ImgComponent.tsx";
+import {demoPromptsContext} from "../context/contextInit.ts";
 
 interface UtilityPoleProps {
   inputs: string
   setInputs: React.Dispatch<React.SetStateAction<string>>
 }
 export function UtilityPole(props:UtilityPoleProps) {
+  const {setImgURL} = useContext(demoPromptsContext)
   const {inputs,setInputs } = props
   const [imgUrl,setImgUrl ] = useState<string>('')
   async function query(data:AnyObject) {
@@ -29,7 +31,7 @@ export function UtilityPole(props:UtilityPoleProps) {
       const type = response.type;
       const file = new File([response], "image.jpg", { type });
       const imageUrl = URL.createObjectURL(file);
-      setImgUrl(imageUrl)
+      setImgURL(imageUrl)
       console.log(imageUrl);
       console.log(response)
     });

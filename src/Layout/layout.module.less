@@ -1,0 +1,23 @@
+@leftSideContainerWidth: 300px;
+@rightSideContainerWidth:300px;
+
+.bodyContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.leftSideContainer{
+  width: @leftSideContainerWidth;
+  min-width: @leftSideContainerWidth;
+  border: 1px solid white;
+}
+.contentContainer{
+  flex: 1;
+  border: 1px solid white;
+}
+
+.rightSideContainer{
+  width: @rightSideContainerWidth;
+  min-width: @rightSideContainerWidth;
+  border: 1px solid white;
+}
