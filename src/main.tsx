@@ -1,10 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.css'
+import {VisualContext} from "./context/VisualContext.tsx";
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <VisualContext value={{}}>
+      <App />
+    </VisualContext>
   </React.StrictMode>,
 )
