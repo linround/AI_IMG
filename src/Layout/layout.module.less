@@ -1,5 +1,6 @@
 @leftSideContainerWidth: 300px;
 @rightSideContainerWidth:300px;
+@pageHeaderHeight: 50px;
 
 .bodyContainer{
   display: flex;
@@ -13,7 +14,10 @@
 }
 .contentContainer{
   flex: 1;
-  border: 1px solid white;
+  border: 8px solid rebeccapurple;
+  height: calc(100vh - @pageHeaderHeight);
+  width: calc(100% - @leftSideContainerWidth - @rightSideContainerWidth);
+  overflow: auto;
 }
 
 .rightSideContainer{
@@ -21,3 +25,8 @@
   min-width: @rightSideContainerWidth;
   border: 1px solid white;
 }
+.headerContainer{
+  height: @pageHeaderHeight;
+  border: 1px solid white;
+}
+
