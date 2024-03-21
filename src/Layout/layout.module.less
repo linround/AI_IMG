@@ -10,23 +10,25 @@
 .leftSideContainer{
   width: @leftSideContainerWidth;
   min-width: @leftSideContainerWidth;
-  border: 1px solid white;
+  box-shadow: 0 0 5px #000, 0 0 2px transparent;
+  border-radius: 0 10px 10px 0;
 }
 .contentContainer{
   flex: 1;
-  border: 8px solid rebeccapurple;
   height: calc(100vh - @pageHeaderHeight);
   width: calc(100% - @leftSideContainerWidth - @rightSideContainerWidth);
   overflow: auto;
+
 }
 
 .rightSideContainer{
   width: @rightSideContainerWidth;
   min-width: @rightSideContainerWidth;
-  border: 1px solid white;
+  box-shadow: 0 0 5px #000, 0 0 2px transparent;
+  border-radius: 10px 0 0 10px;
 }
 .headerContainer{
   height: @pageHeaderHeight;
-  border: 1px solid white;
+  box-shadow: 0 0 5px #000, 0 0 2px transparent;
 }
 

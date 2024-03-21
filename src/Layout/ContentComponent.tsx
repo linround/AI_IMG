@@ -6,7 +6,7 @@ export function ContentComponent() {
   const {imgURL} = React.useContext(demoPromptsContext)
   return(
     <div className={layoutCss.contentContainer}>
-      <ImgComponent src={imgURL} />
+      {imgURL && <ImgComponent src={imgURL} />}
     </div>
   )
 }
