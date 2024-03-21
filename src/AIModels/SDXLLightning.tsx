@@ -1,6 +1,5 @@
 import React, {useContext} from "react";
-import * as fal from "@fal-ai/serverless-client";
-import {SDXLLightningCredentials} from "./env.ts";
+import {getFalAIResponse} from "./env.ts";
 import {AnyObject} from "../type/common.ts";
 import {demoPromptsContext} from "../context/contextInit.ts";
 import Button from "@mui/material/Button";
@@ -9,9 +8,6 @@ import Typography from "@mui/material/Typography";
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 
-fal.config({
-  credentials: SDXLLightningCredentials, // or a function that returns a string
-});
 
 
 
@@ -22,11 +18,7 @@ export function SDXLLightning() {
   const {setImgURL,setCurrentPrompt,currentPrompt} = useContext(demoPromptsContext)
 
   const  onClick = async () => {
-    const result = await fal.subscribe("110602490-fast-sdxl", {
-      input: {
-        prompt:currentPrompt,
-      },
-    });
+    const result = await getFalAIResponse({prompt:currentPrompt})
     const {images} = result as AnyObject;
     if(images && images.length >0){
       setImgURL(images[0].url)
@@ -52,11 +44,11 @@ export function SDXLLightning() {
     <div>
       <input defaultValue={currentPrompt} onChange={onChange}/>
       <div>
-        <Button variant={'contained'} onClick={onClick}>提示词</Button>
+        <Button variant={'contained'} onClick={onClick}>创建</Button>
       </div>
       <div>
         <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-          创建
+          提示词
           <ArrowForwardIosIcon />
         </Button>
         <Popover
