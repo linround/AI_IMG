@@ -5,7 +5,8 @@ import {demoPromptsContext} from "../context/contextInit.ts";
 import Button from "@mui/material/Button";
 import Popover from "@mui/material/Popover";
 import Typography from "@mui/material/Typography";
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import styleCss from './SDXLLightning.module.less'
+import {PromptDemoComponent} from "../Layout/PromptDemoComponent.tsx";
 
 
 
@@ -24,7 +25,7 @@ export function SDXLLightning() {
       setImgURL(images[0].url)
     }
   }
-  const onChange= (e:React.ChangeEvent<HTMLInputElement>) => {
+  const onChange= (e:React.ChangeEvent<HTMLTextAreaElement>) => {
     setCurrentPrompt(e.target.value)
   }
 
@@ -41,27 +42,34 @@ export function SDXLLightning() {
   const open = Boolean(anchorEl);
   const id = open ? 'simple-popover' : undefined;
   return (
-    <div>
-      <input defaultValue={currentPrompt} onChange={onChange}/>
+    <div className={styleCss.sdxContainer}>
       <div>
-        <Button variant={'contained'} onClick={onClick}>创建</Button>
+        <textarea className={styleCss.textArea} defaultValue={currentPrompt} onChange={onChange}/>
       </div>
       <div>
+        <Button variant={'contained'} onClick={onClick}>创建</Button>
         <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-          提示词
-          <ArrowForwardIosIcon />
+          查看示例
         </Button>
+      </div>
+
+      <div>
         <Popover
           id={id}
           open={open}
           anchorEl={anchorEl}
           onClose={handleClose}
           anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
+            vertical: 'center',
+            horizontal: 'right',
           }}
-        >
-          <Typography sx={{ p: 2 }}>The content of the Popover.</Typography>
+          transformOrigin={{
+            vertical: 'center',
+            horizontal: 'left',
+          }}>
+          <Typography sx={{ p: 2 }}>
+            <PromptDemoComponent/>
+          </Typography>
         </Popover>
       </div>
     </div>
