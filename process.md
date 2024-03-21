@@ -5,3 +5,10 @@
 ```text
 npm install -D less
 ```
+## 在安装谷歌浏览器中无法打开网站。需要进行打包配置
+
+```text
+build: {
+    target: ['es2015', 'edge88', 'firefox78', 'chrome87', 'safari14'],
+  },
+```
