@@ -56,7 +56,7 @@ export function SDXLLightning() {
       </div>
       <div>
         <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-          Open Popover
+          创建
           <ArrowForwardIosIcon />
         </Button>
         <Popover
