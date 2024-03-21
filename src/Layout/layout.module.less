@@ -1,6 +1,7 @@
 @leftSideContainerWidth: 300px;
 @rightSideContainerWidth:300px;
 @pageHeaderHeight: 50px;
+@containerBoxShadow: 0 0 5px #644848, 0 0 2px transparent;
 
 .bodyContainer{
   display: flex;
@@ -10,7 +11,7 @@
 .leftSideContainer{
   width: @leftSideContainerWidth;
   min-width: @leftSideContainerWidth;
-  box-shadow: 0 0 5px #000, 0 0 2px transparent;
+  box-shadow: @containerBoxShadow;
   border-radius: 0 10px 10px 0;
 }
 .contentContainer{
@@ -24,11 +25,11 @@
 .rightSideContainer{
   width: @rightSideContainerWidth;
   min-width: @rightSideContainerWidth;
-  box-shadow: 0 0 5px #000, 0 0 2px transparent;
+  box-shadow: @containerBoxShadow;
   border-radius: 10px 0 0 10px;
 }
 .headerContainer{
   height: @pageHeaderHeight;
-  box-shadow: 0 0 5px #000, 0 0 2px transparent;
+  box-shadow: @containerBoxShadow;
 }
 

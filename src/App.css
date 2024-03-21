@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 [data-theme="dark"]{
-  --themeBgColor: #464343;
+  --themeBgColor: #141718;
   --themeTextColor: #fff;
 }
 body{
