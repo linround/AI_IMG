@@ -53,25 +53,23 @@ export function SDXLLightning() {
         </Button>
       </div>
 
-      <div>
-        <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handleClose}
-          anchorOrigin={{
-            vertical: 'center',
-            horizontal: 'right',
-          }}
-          transformOrigin={{
-            vertical: 'center',
-            horizontal: 'left',
-          }}>
-          <Typography sx={{ p: 2 }}>
-            <PromptDemoComponent/>
-          </Typography>
-        </Popover>
-      </div>
+      <Popover
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        onClose={handleClose}
+        anchorOrigin={{
+          vertical: 'center',
+          horizontal: 'right',
+        }}
+        transformOrigin={{
+          vertical: 'center',
+          horizontal: 'left',
+        }}>
+        <Typography sx={{ p: 2 }}>
+          <PromptDemoComponent/>
+        </Typography>
+      </Popover>
     </div>
   )
 }
