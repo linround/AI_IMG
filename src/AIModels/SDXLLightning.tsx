@@ -50,14 +50,22 @@ export function SDXLLightning() {
   const id = open ? 'simple-popover' : undefined;
   return (
     <div className={styleCss.sdxContainer}>
+      <Button
+        className={styleCss.sdxViewDemoBtn}
+        aria-describedby={id}
+        variant="contained"
+        onClick={handleClick}>
+        查看提示词示例
+      </Button>
       <div>
-        <textarea className={styleCss.textArea} defaultValue={currentPrompt} onChange={onChange}/>
+        <textarea
+          rows={6}
+          className={styleCss.textArea}
+          defaultValue={currentPrompt}
+          onChange={onChange}/>
       </div>
       <div>
         <Button variant={'contained'} onClick={onClick}>创建</Button>
-        <Button aria-describedby={id} variant="contained" onClick={handleClick}>
-          查看示例
-        </Button>
       </div>
 
       <Popover
@@ -73,7 +81,10 @@ export function SDXLLightning() {
           vertical: 'center',
           horizontal: 'left',
         }}>
-        <PromptDemoComponent/>
+        <div
+          className={styleCss.popoverContainer}>
+          <PromptDemoComponent/>
+        </div>
       </Popover>
     </div>
   )

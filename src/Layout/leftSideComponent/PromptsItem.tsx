@@ -9,7 +9,7 @@ export function PromptsItem(props:PromptsItemProps) {
     <div>
       <div>{prompt}</div>
       <div>
-        <Button variant="contained" size={'small'} onClick={onSelect}>Select</Button>
+        <Button variant="contained" size={'small'} onClick={onSelect}>选择</Button>
       </div>
     </div>
   )
