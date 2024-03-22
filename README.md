@@ -3,10 +3,12 @@
 
 ## 搭建自己的 AI 图床
 - https://github.com/Sygil-Dev/sygil-webui
-## AI 大模型
+## text to image
 - https://huggingface.co/BotsOne/utilitypole
 - https://huggingface.co/models?pipeline_tag=text-to-image&sort=trending
 - https://huggingface.co/ByteDance/SDXL-Lightning
+## text to video
+- https://huggingface.co/spaces/ByteDance/AnimateDiff-Lightning
 
 ## 图像生成
 
