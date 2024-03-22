@@ -8,6 +8,7 @@ import styleCss from './SDXLLightning.module.less'
 import {PromptDemoComponent} from "../Layout/PromptDemoComponent.tsx";
 import {addPicture} from "../api/image.ts";
 import CloseIcon from "@mui/icons-material/Close";
+import {toTranslate} from "../api/translate.ts";
 
 
 
@@ -32,6 +33,11 @@ export function SDXLLightning() {
         userId:1
       })
     }
+  }
+
+  const onTranslate = async () => {
+    const result = await toTranslate()
+    console.log(result)
   }
   const onChange= (e:React.ChangeEvent<HTMLTextAreaElement>) => {
     setCurrentPrompt(e.target.value)
@@ -60,6 +66,7 @@ export function SDXLLightning() {
       </Button>
       <div className={styleCss.textAreaContainer}>
         <textarea
+          placeholder={'请输入提示词.例如：一个小猫'}
           rows={8}
           className={styleCss.textArea}
           defaultValue={currentPrompt}
@@ -71,6 +78,7 @@ export function SDXLLightning() {
           variant={'contained'}
           onClick={onClick}>创建</Button>
         <Button
+          onClick={onTranslate}
           className={styleCss.translateBtn}>翻译</Button>
       </div>
 
