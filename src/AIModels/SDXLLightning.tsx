@@ -4,9 +4,9 @@ import {AnyObject} from "../type/common.ts";
 import {demoPromptsContext} from "../context/contextInit.ts";
 import Button from "@mui/material/Button";
 import Popover from "@mui/material/Popover";
-import Typography from "@mui/material/Typography";
 import styleCss from './SDXLLightning.module.less'
 import {PromptDemoComponent} from "../Layout/PromptDemoComponent.tsx";
+import {addPicture} from "../api/image.ts";
 
 
 
@@ -22,7 +22,14 @@ export function SDXLLightning() {
     const result = await getFalAIResponse({prompt:currentPrompt})
     const {images} = result as AnyObject;
     if(images && images.length >0){
-      setImgURL(images[0].url)
+      const imageUrl = images[0].url
+      setImgURL(imageUrl)
+      await addPicture({
+        imageUrl,
+        pictureType:'SDXLLightning',
+        prompt:currentPrompt,
+        userId:1
+      })
     }
   }
   const onChange= (e:React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -66,9 +73,7 @@ export function SDXLLightning() {
           vertical: 'center',
           horizontal: 'left',
         }}>
-        <Typography sx={{ p: 2 }}>
-          <PromptDemoComponent/>
-        </Typography>
+        <PromptDemoComponent/>
       </Popover>
     </div>
   )

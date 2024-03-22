@@ -28,7 +28,15 @@
   width: @rightSideContainerWidth;
   min-width: @rightSideContainerWidth;
   box-shadow: @containerBoxShadow;
+  height: calc(100vh - @pageHeaderHeight);
   border-radius: 10px 0 0 10px;
+  overflow: auto;
+}
+.rightSideImg{
+  width: calc(100% - 20px);
+  margin: 10px;
+  object-fit: cover;
+  border-radius: 10px;
 }
 .headerContainer{
   height: @pageHeaderHeight;

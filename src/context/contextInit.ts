@@ -1,5 +1,5 @@
 import {createContext} from "react";
-import {IDemoPromptsContext} from "../type/context.ts";
+import {IDemoPromptsContext, IPictureContext} from "../type/context.ts";
 
 export const demoPromptsContext = createContext<IDemoPromptsContext>({
   prompts: [],
@@ -8,4 +8,10 @@ export const demoPromptsContext = createContext<IDemoPromptsContext>({
 
   imgURL: '',
   setImgURL: () => void 0,
+})
+
+
+export const pictureContext = createContext<IPictureContext>({
+  pictureList: [],
+  setPictureList: () => void 0,
 })
