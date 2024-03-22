@@ -60,7 +60,7 @@ export function SDXLLightning() {
       </Button>
       <div>
         <textarea
-          rows={6}
+          rows={8}
           className={styleCss.textArea}
           defaultValue={currentPrompt}
           onChange={onChange}/>
