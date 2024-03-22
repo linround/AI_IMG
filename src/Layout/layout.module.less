@@ -32,11 +32,13 @@
   border-radius: 10px 0 0 10px;
   overflow: auto;
 }
+
+@rightSideImgMargin: 10px;
 .rightSideImg{
-  width: calc(100% - 20px);
-  margin: 10px;
+  width: calc(100% - 2*@rightSideImgMargin);
+  margin: @rightSideImgMargin;
   object-fit: cover;
-  border-radius: 10px;
+  border-radius: @rightSideImgMargin;
 }
 .headerContainer{
   height: @pageHeaderHeight;
