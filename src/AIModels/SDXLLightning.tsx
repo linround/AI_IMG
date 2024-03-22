@@ -58,12 +58,13 @@ export function SDXLLightning() {
         onClick={handleClick}>
         查看提示词示例
       </Button>
-      <div>
+      <div className={styleCss.textAreaContainer}>
         <textarea
           rows={8}
           className={styleCss.textArea}
           defaultValue={currentPrompt}
           onChange={onChange}/>
+        <div className={styleCss.translateBtn}>翻译</div>
       </div>
       <div>
         <Button variant={'contained'} onClick={onClick}>创建</Button>
