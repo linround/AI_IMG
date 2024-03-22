@@ -7,6 +7,7 @@ import Popover from "@mui/material/Popover";
 import styleCss from './SDXLLightning.module.less'
 import {PromptDemoComponent} from "../Layout/PromptDemoComponent.tsx";
 import {addPicture} from "../api/image.ts";
+import CloseIcon from "@mui/icons-material/Close";
 
 
 
@@ -70,6 +71,7 @@ export function SDXLLightning() {
 
       <Popover
         id={id}
+        classes={{paper:styleCss.popoverContainer}}
         open={open}
         anchorEl={anchorEl}
         onClose={handleClose}
@@ -81,8 +83,11 @@ export function SDXLLightning() {
           vertical: 'center',
           horizontal: 'left',
         }}>
-        <div
-          className={styleCss.popoverContainer}>
+        <div>
+          <div className={styleCss.popoverHeader}>
+            <p>提示词</p>
+            <CloseIcon className={styleCss.closePopoverIcon} onClick={handleClose}/>
+          </div>
           <PromptDemoComponent/>
         </div>
       </Popover>
