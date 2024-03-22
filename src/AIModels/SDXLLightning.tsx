@@ -64,10 +64,14 @@ export function SDXLLightning() {
           className={styleCss.textArea}
           defaultValue={currentPrompt}
           onChange={onChange}/>
-        <div className={styleCss.translateBtn}>翻译</div>
       </div>
-      <div>
-        <Button variant={'contained'} onClick={onClick}>创建</Button>
+      <div className={styleCss.createBtnContainer}>
+        <Button
+          className={styleCss.createBtn}
+          variant={'contained'}
+          onClick={onClick}>创建</Button>
+        <Button
+          className={styleCss.translateBtn}>翻译</Button>
       </div>
 
       <Popover
