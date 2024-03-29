@@ -3,9 +3,7 @@ import {LeftSide} from "./LeftSide.tsx";
 import {ContentComponent} from "./ContentComponent.tsx";
 import {RightSide} from "./RightSide.tsx";
 import layoutCss from './layout.module.less'
-
 export function LayoutComponent() {
-  console.log('LayoutComponent, render')
   return (
     <div>
       <HeaderComponent />

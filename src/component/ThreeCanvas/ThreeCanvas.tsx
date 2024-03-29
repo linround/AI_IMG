@@ -9,8 +9,12 @@ let renderer:THREE.WebGLRenderer
 let uniforms:any = null
 let canvas:any = null
 const defaultUrl = 'https://fal-cdn.batuhan-941.workers.dev/files/monkey/M5iiSBcsoX6ERJ1jlRkxK.jpeg'
-export function ThreeCanvas() {
-  console.log('ThreeCanvas,render')
+
+interface IThreeCanvasProps {
+  texture:THREE.Texture
+}
+export function ThreeCanvas(  props:IThreeCanvasProps) {
+  const {texture} = props
   const ref = useRef<HTMLCanvasElement>(null)
   const {imgURL} = React.useContext(demoPromptsContext)
   const [height, setHeight] = useState(0)
@@ -40,7 +44,6 @@ export function ThreeCanvas() {
       const plane = new THREE.PlaneGeometry(
         2, 2, 1, 1
       )
-      const texture = createImgTexture(defaultUrl)
       uniforms = {
         brightness: { value: 0, },
         contrast: { value: 0.5, },
@@ -85,8 +88,10 @@ export function ThreeCanvas() {
   },[ref])
 
   useEffect(() => {
+    if(!imgURL) return
     console.log(imgURL)
     uniforms.iChannel0.value = createImgTexture(imgURL)
+    updateCanvasSize(imgURL).then(console.log)
   }, [imgURL]);
   return (
     <canvas width={width} height={height} ref={ref}/>
