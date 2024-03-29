@@ -10,6 +10,7 @@ let uniforms:any = null
 let canvas:any = null
 const defaultUrl = 'https://fal-cdn.batuhan-941.workers.dev/files/monkey/M5iiSBcsoX6ERJ1jlRkxK.jpeg'
 export function ThreeCanvas() {
+  console.log('ThreeCanvas,render')
   const ref = useRef<HTMLCanvasElement>(null)
   const {imgURL} = React.useContext(demoPromptsContext)
   const [height, setHeight] = useState(0)
@@ -25,6 +26,7 @@ export function ThreeCanvas() {
     setHeight(height)
   }
   useEffect(()=>{
+    console.log('ThreeCanvas,canvas effect')
     canvas = ref.current
     if (canvas) {
       (async function () {
@@ -80,7 +82,12 @@ export function ThreeCanvas() {
         y = canvas.height - e.offsetY
       })
     }
-  },[ref, imgURL])
+  },[ref])
+
+  useEffect(() => {
+    console.log(imgURL)
+    uniforms.iChannel0.value = createImgTexture(imgURL)
+  }, [imgURL]);
   return (
     <canvas width={width} height={height} ref={ref}/>
   )
